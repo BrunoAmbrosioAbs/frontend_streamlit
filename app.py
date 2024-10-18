@@ -1,6 +1,8 @@
 import streamlit as st 
 import pandas as pd 
 import matplotlib.pyplot as plt
+from pathlib import Path
+caminho= str(Path(__file__). resolve().parent)
 
 st.title('meu primeiro dashboard')
 st.header('esse é um header')
@@ -25,8 +27,8 @@ with abas [1]:
         st.error('voce é um perdedor')
 
     with abas [2]:
-        caminho = "C:\\Users\\bruno\\ibmec\\Projeto em Ciências de Dados\\Frontend\\data\\ibov.csv"
-        #df = pd.read_csv(caminho + "\\ibov.csv") -- caso se precisar
+        #caminho = "C:\\Users\\bruno\\ibmec\\Projeto em Ciências de Dados\\Frontend\\data\\ibov.csv"
+        df = pd.read_csv(caminho + "\\data\\ibov.csv") 
         df = pd.read_csv(caminho)
         st.dataframe(df)
 
