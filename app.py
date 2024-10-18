@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import matplotlib.pyplot as plt
 from pathlib import Path
-caminho = Path(_file_).resolve().parent / "data" / "ibov.csv"
+caminho = Path(__file__).resolve().parent / "data" / "ibov.csv"
 
 st.title('meu primeiro dashboard')
 st.header('esse é um header')
